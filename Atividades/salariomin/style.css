@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(135deg, #ffd2d2 0%, #ff5c5c 100%);
+}
+
+.mostrador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 380px;
+    min-height: 260px;
+    padding: 28px 24px;
+    border: 3px solid #222;
+    border-radius: 24px;
+    text-align: center;
+    background-color: whitesmoke;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.mostrador > div {
+    width: 100%;
+}
+
+h3 {
+    margin: 0 0 18px;
+    color: #222;
+    font-size: 1.5rem;
+}
+
+.numeros {
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+}
+
+.numeros p {
+    margin: 0;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cfcfcf;
+    border-radius: 12px;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #d62828;
+    box-shadow: 0 0 0 3px rgba(214, 40, 40, 0.15);
+}
+
+input[type="submit"] {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #d62828;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #b71f1f;
+    transform: translateY(-1px);
+}
+
+input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
+    .mostrador {
+        min-height: 220px;
+        padding: 22px 18px;
+        border-radius: 18px;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .numeros p {
+        font-size: 0.95rem;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+}
+
